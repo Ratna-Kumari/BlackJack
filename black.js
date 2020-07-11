@@ -12,6 +12,9 @@
 document.querySelector('#hit-btn').addEventListener('click', selectCard);
 document.querySelector('#deal-btn').addEventListener('click', clickedDeal);
 document.querySelector('#stand-btn').addEventListener('click', clickStand);
+document.querySelector('#how-to-play').addEventListener('click', howToPlay)
+document.querySelector('#how-to-play-close').addEventListener('click', howToPlayClose)
+
 
 let currentPlayer = 'you'
 let players = ['you', 'dealer']
@@ -162,3 +165,13 @@ function sleep(ms){
     return new Promise(resolve=> {setTimeout(resolve, ms)});
 }
 
+function howToPlay(){
+    document.querySelector('#instructions').style.display = 'block';
+    document.querySelector('#overlay').style.display = 'block'
+}
+
+function howToPlayClose(){
+    document.querySelector('#instructions').style.display = 'none';
+
+
+}
